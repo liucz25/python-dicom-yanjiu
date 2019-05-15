@@ -1,0 +1,19 @@
+import dicom
+import numpy as np
+from numpy.linalg import slogdet
+import matplotlib.pyplot as plt
+inds=dicom.read_file("lizi\\in.dcm")
+outds=dicom.read_file("lizi\\out.dcm")
+print inds.PatientName
+np.inarr=inds.pixel_array
+np.outarr=outds.pixel_array
+np.shuiarr=(np.inarr+np.outarr)/2
+np.zhiarr=(np.inarr-np.outarr)/2
+plt.gray()
+plt.imshow(np.zhiarr)
+plt.show()
+
+
+
+
+Tag£¨0028|1052£©£ºrescale intercept  £¨0028|1053£©£ºrescale slope

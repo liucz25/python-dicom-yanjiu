@@ -1,0 +1,20 @@
+import numpy as np
+
+def setWW(pix,ww,wc):
+    img=pix
+    rows=len(img)
+    cols=len(img[0])
+    min=(2*wc-ww)/2.0 +0.5
+    max=(2*wc+ww)/2.0+0.5
+    dFactor=255.0/(max-min)
+    for i in numpy.arange(rows):
+        for j in numpy.arange(cols):
+            img[i,j]=int(_img[i,j]-min)*dFactor)
+    min_index=img<0
+    img[min_index]=0
+    max_index=img>255
+    img{max_index]=255
+    return img
+
+
+https://blog.csdn.net/m_buddy/article/details/80078912

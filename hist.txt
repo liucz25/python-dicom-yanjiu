@@ -1,0 +1,34 @@
+import dicom
+import pydicom
+pwd
+cd d:
+    \
+d:
+cd ..
+cd ..
+ls
+from pydicom.data import get_testdata_files
+filename=get_testdata_files("I120")
+ds=pydicom.dcmread(filename)
+filename
+filename=get_testdata_files("I120")
+filename
+filename=get_testdata_files("I120")[0]
+filename=get_testdata_files("I120.dcm")
+filename
+filename=get_testdata_files("3.dcm")
+filename
+ds=pydicom.dcmread('3.dcm')
+ds
+ds.pixel_array
+dp=ds.pixel_array
+dp
+import matplotlib.pyplot as plt
+ds.PatientName
+plt.gray()
+plt.imshow(dp)
+plt.show()
+%history
+%history > hist.txt
+ls
+%history -f hist.txt
