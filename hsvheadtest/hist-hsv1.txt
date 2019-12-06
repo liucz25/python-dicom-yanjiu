@@ -1,0 +1,14 @@
+from PIL import Image
+im=Image.open("temp.jpg")
+im.mode
+imm=im.convert("HSV")
+im=Image.open("Imh1.png")
+im=Image.open("lab.png")
+im.mode
+imm=im.convert("HSV")
+imm.show()
+imm.mode
+hist
+hist > hist-hsv1.txt
+pwd
+hist -f hist-hsv1.txt

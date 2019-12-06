@@ -1,0 +1,27 @@
+import pydicom
+ds=pydicom.dcmread("Image15.dcm")
+ds
+dp=ds.pixel_array
+import matplotlib.pyplot as plt
+plt.gray()
+plt.imshow(dp)
+plt.show()
+dp.shape
+import setww
+import setww.py
+import setww.py
+import setww.py
+import setww
+setww.setWW(dp,360,60)
+import numpy
+setww.setWW(dp,360,60)
+import setww
+setww.setWW(dp,360,60)
+import setww
+setww.setWW(dp,360,60)
+setww.setWW(dp,360,60)
+import setww
+setww.setWW(dp,360,60)
+python setWW
+python setww.py
+%hist -f h1.txt
