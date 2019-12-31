@@ -1,0 +1,32 @@
+import okWangluoPydicom as tz
+
+cd hsvtest/a/python-dicom-yanjiu/hsvheadtest/
+
+import okWangluoPydicom as tz
+import matplotlib.pyplot as plt
+import pydicom
+import PIL.Image as Image
+import numpy as np
+filename="Image15.dcm"
+dcm = pydicom.dcmread(filename)
+img,wight,hight=tz.get_pixeldata(dcm)
+img_low=tz.setDicomWinWidthWinCenter(img,80,40,wight,hight)/2
+data_low=Image.fromarray(img_low)
+data_low = data_low.convert('L')
+data_low
+img_low
+hist=plt.hist(img_low)
+
+hist1=np.reshape(hist,1)
+
+imgg=np.reshape(img_low,(-1,1))
+
+hist1=plt.hist(imgg)
+
+plt.show()
+
+
+np.save("jkjk.txt",hist1)
+
+
+%history -f hist-hi.txt

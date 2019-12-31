@@ -1,0 +1,65 @@
+import okWangluoPydicom as tz
+
+import matplotlib.pyplot as plt
+import pydicom
+import numpy as np
+import pylab
+filename="mr15.dcm"
+dcm = pydicom.dcmread(filename)
+img,wight,hight=tz.get_pixeldata(dcm)
+img
+img.max()
+img.mmin()
+img.min()
+im=np.reshape(img,(1,-1))
+im.shape
+hist=plt.hist(im)
+im=np.reshape(img,(-1,1))
+hist=plt.hist(im)
+plt.show()
+im.shape
+im.max()
+im.min()
+hist
+hist=plt.hist(im)
+plt.show()
+%history
+hist=plt.hist(im,bins=662)
+plt.show()
+hist
+a=hist[0]
+a.max()
+a.min()
+a=hist[0][1:]
+a.max()
+b=hist[1][1:]
+plt.plot(b,a)
+b=hist[1
+]
+plt.plot(b,a)
+a
+a.size
+b.size
+b=hist[1][2:]
+b.size
+plt.plot(b,a)
+plt.show()
+a=hist[0][2:]
+b=hist[1][3:]
+a.size
+b.size
+plt.plot(b,a)
+plt.show()
+a=hist[0][3:]
+b=hist[1][4:]
+plt.plot(b,a)
+plt.show()
+a=hist[0][4:]
+b=hist[1][5:]
+plt.plot(b,a)
+plt.show()
+a=hist[0][20:]
+b=hist[1][21:]
+plt.plot(b,a)
+plt.show()
+%history -f mr-history.txt

@@ -1,0 +1,81 @@
+import okWangluoPydicom as tz
+ls
+cd hsvtest/a/python-dicom-yanjiu/hsvheadtest/
+ls
+pwd
+import okWangluoPydicom as tz
+import matplotlib.pyplot as plt
+import pydicom
+import PIL.Image as Image
+import numpy as np
+filename="Image15.dcm"
+dcm = pydicom.dcmread(filename)
+img,wight,hight=tz.get_pixeldata(dcm)
+img_low=tz.setDicomWinWidthWinCenter(img,80,40,wight,hight)/2
+data_low=Image.fromarray(img_low)
+data_low = data_low.convert('L')
+data_low
+img_low
+hist=plt.hist(img_low)
+hist
+hist1=np.reshape(hist,1)
+hist.shape
+img_low.shape
+imgg=np.reshape(img_low,1)
+imgg=np.reshape(img_low,(1))
+imgg=np.reshape(img_low,(-1,1))
+imgg
+hist1=plt.hist(imgg)
+hist1
+plt.show()
+np.savetxt("hist1",hist1)
+np.savetxt(jkjk,hist1)
+np.savetxt("jkjk",hist1)
+np.savetxt(hist1,"hih")
+np.savetxt("jkjk.txt",hist1)
+hist1
+np.save("jkjk.txt",hist1)
+np.save("jkjk.txt",hist1)
+np.savetxt("jkjk.txt",hist1)
+hist
+%history
+%history > hist-hi.txt
+%history -f hist-hi.txt
+hist.shape
+hist1.shape
+hist1.shape()
+hist
+hist1
+hist1[1]
+hist1[1][1]
+hist1[1].shape
+hist1[0].shape
+hist1[1].shape
+imgg
+imgg
+hist2=plt.hist(imgg,bins=128)
+hist2
+plt.show()
+hist2[0][1:-1]
+hist2[0][1:-1].shape
+hist2[0].shape
+a=hist2[0][1:-1].shape
+a=hist2[0][1:-1]
+b=hist2[b][1:-1]
+b=hist2[1][1:-1]
+c=(a,b)
+c
+plt.plot(a,b)
+b=hist2[b][1:]
+a=hist2[0][1:]
+plt.plot(a,b)
+plt.show()
+plt.plot(b,a)
+plt.show()
+b=hist2[1][1:-2]
+a=hist2[0][1:-1]
+plt.plot(b,a)
+plt.show()
+plt.scatter(b,a)
+plt.show()
+%history -f scat
